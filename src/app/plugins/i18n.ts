@@ -1,14 +1,12 @@
 import { createI18n } from 'vue-i18n'
-// import en from '../../locales/en'
-// import th from '../../locales/th'
+import en from '@/locales/en.json'
+import th from '@/locales/th.json'
 
 const i18n = createI18n({
   legacy: false,
   locale: 'en',
-  messages: {
-    en: { hello: 'Hello' },
-    th: { hello: 'สวัสดี' },
-  },
+  // fallbackLocale: 'en',
+  messages: { en, th },
 })
 
 export default i18n
