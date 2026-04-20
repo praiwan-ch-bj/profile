@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.1.18",
-    "tailwindcss": "^4.1.18",
     "vue": "^3.5.26",
     "vue-i18n": "^11.2.8",
     "vue-router": "^4.6.4"
@@ -34,6 +33,7 @@
     "jiti": "^2.6.1",
     "npm-run-all2": "^8.0.4",
     "prettier": "3.7.4",
+    "tailwindcss": "^4.2.2",
     "typescript": "~5.9.3",
     "vite": "^7.3.0",
     "vite-plugin-vue-devtools": "^8.0.5",
