@@ -1,3 +1,9 @@
+<script setup lang="ts">
+import { usePageTitle } from '@/composables/ui/usePageTitle'
+
+usePageTitle()
+</script>
+
 <template>
   <header>
     <nav>
