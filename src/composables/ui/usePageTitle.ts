@@ -1,17 +1,21 @@
 import { onMounted, onUnmounted } from 'vue'
+import { sections } from '@/constants/sections'
 
 export function usePageTitle(prefix = 'Praiwan') {
   let observer: IntersectionObserver | null = null
 
   onMounted(() => {
-    const sections = document.querySelectorAll('section')
-    
     observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            const id = entry.target.id
-            document.title = `${prefix} - ${id}`
+            const currentSection = sections.find(
+              (section) => section.id === entry.target.id
+            )
+
+            if (currentSection) {
+              document.title = `${prefix} - ${currentSection.title}`
+            }
           }
         })
       },
@@ -20,7 +24,13 @@ export function usePageTitle(prefix = 'Praiwan') {
       }
     )
 
-    sections.forEach((section) => observer?.observe(section))
+    sections.forEach((section) => {
+      const el = document.getElementById(section.id)
+
+      if (el) {
+        observer?.observe(el)
+      }
+    })
   })
 
   onUnmounted(() => {

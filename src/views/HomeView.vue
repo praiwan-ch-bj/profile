@@ -1,15 +1,13 @@
+<script setup lang="ts">
+import HeroSection from '@/components/layouts/sections/Hero.vue';
+import AboutSection from '@/components/layouts/sections/About.vue';
+import ExperienceSection from '@/components/layouts/sections/Experience.vue';
+</script>
+
 <template>
   <div class="mx-auto px-4">
-    <section id="home">
-      <h1>Home</h1>
-    </section>
-  
-    <section id="about">
-      <h1>About Me</h1>
-    </section>
-  
-    <section id="projects">
-      <h1>Projects</h1>
-    </section>
+    <HeroSection></HeroSection>
+    <AboutSection></AboutSection>
+    <ExperienceSection></ExperienceSection>
   </div>
 </template>
